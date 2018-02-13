@@ -1,17 +1,9 @@
 package com.whz.model.sys;
 
-import java.io.Serializable;
 import java.util.Date;
-/**
- * 用户实体类
- * @author wenhz
- * @date 2018-1-27 下午05:53:23
- */
-public class User implements Serializable{
 
-	private static final long serialVersionUID = 450218160660078255L;
-
-	private Integer id;
+public class User {
+    private Integer id;
 
     private String account;
 
@@ -21,11 +13,11 @@ public class User implements Serializable{
 
     private Boolean useStatus;
 
+    private String description;
+
     private Date gmtCreate;
 
     private Date gmtModfied;
-
-    private String description;
 
     public Integer getId() {
         return id;
@@ -67,6 +59,14 @@ public class User implements Serializable{
         this.useStatus = useStatus;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description == null ? null : description.trim();
+    }
+
     public Date getGmtCreate() {
         return gmtCreate;
     }
@@ -82,21 +82,4 @@ public class User implements Serializable{
     public void setGmtModfied(Date gmtModfied) {
         this.gmtModfied = gmtModfied;
     }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description == null ? null : description.trim();
-    }
-
-	@Override
-	public String toString() {
-		return "User [id=" + id + ", account=" + account + ", password="
-				+ password + ", name=" + name + ", useStatus=" + useStatus
-				+ ", gmtCreate=" + gmtCreate + ", gmtModfied=" + gmtModfied
-				+ ", description=" + description + "]";
-	}
-    
 }

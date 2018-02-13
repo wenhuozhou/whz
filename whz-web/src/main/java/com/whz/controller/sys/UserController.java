@@ -22,8 +22,8 @@ public class UserController extends BaseController{
 	@Resource
 	private UserService userService;
 	
-	@RequestMapping("/getUser/{id}")
-	public @ResponseBody User getUser(@PathVariable Integer id){
+	@RequestMapping("/get/{id}")
+	public @ResponseBody User get(@PathVariable Integer id){
 		return userService.selectByPrimaryKey(id);
 	}
 	

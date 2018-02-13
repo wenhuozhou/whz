@@ -18,7 +18,6 @@
 				<img class="rotation my_img" src="<%=path%>/resources/images/login/black_hole.jpg" width="90" height="90"/>
 			</div>
 			<form id="loginForm" onsubmit="return login()" method="post">
-				<h1>凤巢系统</h1>
 				<div>
 					<input type="text" name="username" placeholder="用户名" required="" id="username" />
 				</div>
@@ -35,9 +34,6 @@
 					<input type="submit" value="登录" class="btn btn-primary"/>
 				</div>
 			</form>
-			<div class="button">
-				<a href="#">@whz版权所有</a>
-			</div>
 	    </div>
 	</div>
 </body>

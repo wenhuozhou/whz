@@ -3,6 +3,8 @@ package com.whz.common.util;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -21,9 +23,10 @@ public class WebUtils {
 	 * @author wenhz
 	 * @date 2018-1-27 下午03:36:49
 	 */
-	public static boolean isAjax(HttpServletRequest request){
-		if(null != request.getHeader("X-Requested-With") 
-				&& "XMLHttpRequest".equalsIgnoreCase(request.getHeader("X-Requested-With"))){
+	public static boolean isAjax(ServletRequest request){
+		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
+		if(null != httpServletRequest.getHeader("X-Requested-With") 
+				&& "XMLHttpRequest".equalsIgnoreCase(httpServletRequest.getHeader("X-Requested-With"))){
 			return true;
 		}
 		return false;
@@ -36,7 +39,7 @@ public class WebUtils {
 	 * @author wenhz
 	 * @date 2018-1-27 下午03:33:50
 	 */
-	public static void writeToJson(HttpServletResponse response, Object object){
+	public static void writeToJson(ServletResponse response, Object object){
 		try {
 			PrintWriter writer = response.getWriter();
 			String jsonStr = JSONObject.toJSONString(object);

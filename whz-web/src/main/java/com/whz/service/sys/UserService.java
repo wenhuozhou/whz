@@ -5,9 +5,9 @@ import com.whz.model.sys.UserExample;
 import com.whz.service.base.BaseService;
 
 /**
- * 
+ * 用户服务接口
  * @author wenhz
- * @date 2018-1-27 下午04:18:57
+ * @date 2018-2-4 下午03:40:03
  */
 public interface UserService extends BaseService<User, UserExample>{
 
