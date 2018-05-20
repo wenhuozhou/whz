@@ -9,3 +9,10 @@ var MenuConstant ={
 	MENU:1
 
 };
+
+var MessageConstant ={
+	
+	NO_SELECTED_DATA:"没有选择数据,请确认！"
+	
+		
+};

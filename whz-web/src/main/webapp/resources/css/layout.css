@@ -1,0 +1,12 @@
+.layout-header{
+	height: 20%;
+	overflow:inherit;	
+}
+
+.layout-content{
+	height: 80%;
+}
+
+.window-footer{
+	text-align: center;
+}

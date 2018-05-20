@@ -18,7 +18,7 @@ public class MessageVo implements Serializable{
 	
 	private Object message;
 	
-	private Integer total;
+	private Long total;
 	
 	private List rows = new ArrayList();
 	
@@ -35,13 +35,15 @@ public class MessageVo implements Serializable{
 		this.message = message;
 	}
 
-	public MessageVo(Integer total, List rows) {
+	public MessageVo(Long total, List rows) {
 		super();
+		this.success = true;
+		this.message = "查询成功!";
 		this.total = total;
 		this.rows = rows;
 	}
 
-	public MessageVo(boolean success, Object message, Integer total, List rows) {
+	public MessageVo(boolean success, Object message, Long total, List rows) {
 		super();
 		this.success = success;
 		this.message = message;
@@ -49,7 +51,7 @@ public class MessageVo implements Serializable{
 		this.rows = rows;
 	}
 
-	public MessageVo(boolean success, Object message, Integer total, List rows,
+	public MessageVo(boolean success, Object message, Long total, List rows,
 			Object other) {
 		super();
 		this.success = success;
@@ -58,7 +60,14 @@ public class MessageVo implements Serializable{
 		this.rows = rows;
 		this.other = other;
 	}
-
+	
+	public void init(Long total, List rows){
+		this.success = true;
+		this.message = "查询成功!";
+		this.total = total;
+		this.rows = rows;
+	}
+	
 	public boolean isSuccess() {
 		return success;
 	}
@@ -75,11 +84,11 @@ public class MessageVo implements Serializable{
 		this.message = message;
 	}
 
-	public Integer getTotal() {
+	public Long getTotal() {
 		return total;
 	}
 
-	public void setTotal(Integer total) {
+	public void setTotal(Long total) {
 		this.total = total;
 	}
 

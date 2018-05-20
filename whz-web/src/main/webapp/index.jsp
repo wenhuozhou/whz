@@ -11,6 +11,8 @@
 <link rel="stylesheet" type="text/css" href="<%=path%>/resources/font-awesome-4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="<%=path%>/resources/jquery-confirm/jquery-confirm.min.css">
 <link rel="stylesheet" type="text/css" href="<%=path%>/resources/css/buttons.css">
+<link rel="stylesheet" type="text/css" href="<%=path%>/resources/css/form.css">
+<link rel="stylesheet" type="text/css" href="<%=path%>/resources/css/layout.css">
 
 <script src="<%=path%>/resources/jquery-easyui-1.5.4/jquery.min.js"></script>
 <script src="<%=path%>/resources/jquery-easyui-1.5.4/jquery.easyui.min.js"></script>
@@ -18,6 +20,7 @@
 <script src="<%=path%>/resources/jquery-confirm/jquery-confirm.min.js"></script>
 <script src="<%=path%>/resources/js/constant.js"></script>
 <script src="<%=path%>/resources/js/index.js"></script>
+<script src="<%=path%>/resources/js/utils.js"></script>
 
 </head>
 <body class="easyui-layout" data-options="fit:true">
@@ -34,7 +37,7 @@
 				<div class="divblock">
 					  <button class="button button-primary button-rounded button-small" >添加</button>
 					  <button class="button button-action button-rounded button-small" >修改</button>
-					  <button class="button button-caution  button-rounded button-small" >删除</button>
+					  <button class="button button-caution  button-rounded button-small" >删除</button>  
 				</div>
 			</div>
 		</div>

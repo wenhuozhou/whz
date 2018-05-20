@@ -36,12 +36,12 @@
 	
 	<!-- 静态资源解析 包括 ：js、css、img .. -->
 	<mvc:resources location="/resources/" mapping="/resources/**"/>
-	
+	<mvc:resources location="/jsp/" mapping="/jsp/**"/>
     <!-- Jsp视图 -->
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="order" value="1"/>
         <property name="viewNames" value="*.jsp"/>
-        <property name="prefix" value="/WEB-INF/jsp"/>
+        <property name="prefix" value="/jsp"/>
         <property name="suffix" value=""/>
         <property name="contentType" value="text/html; charset=utf-8"/>
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>

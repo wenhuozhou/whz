@@ -35,5 +35,8 @@ var Index ={
 };
 
 $(function(){ 
+	//左边菜单实例化
 	Index.initMenuTree();
-}); 
+	
+	
+});
